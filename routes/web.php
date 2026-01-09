@@ -24,9 +24,9 @@ Route::get('/produits/{cat}', function ($cat) {
 
     if ($cat == 'beaute') {
         $produits = [
-            ["nom" => "Crème hydratante", "prix" => 25, "image" => "creme_hydratante.jpg"],
-            ["nom" => "Huile essentielle", "prix" => 15, "image" => "huile_essentielle.jpg"],
-            ["nom" => "Masque visage", "prix" => 20, "image" => "masque_visage.jpg"],
+            ["nom" => "Crème hydratante", "prix" => 25, "image" => "https://via.placeholder.com/200x150/28a745/ffffff?text=Cre%CC%80me+Hydratante"],
+            ["nom" => "Huile essentielle", "prix" => 15, "image" => "https://via.placeholder.com/200x150/20c997/ffffff?text=Huile+Essentielle"],
+            ["nom" => "Masque visage", "prix" => 20, "image" => "https://via.placeholder.com/200x150/17a2b8/ffffff?text=Masque+Visage"],
         ];
     }
     else {

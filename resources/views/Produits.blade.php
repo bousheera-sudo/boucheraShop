@@ -3,26 +3,19 @@
 @section('title', 'Produits')
 
 @section('content')
-<h2 class="mb-4">Catégorie : {{ $categorie }}</h2>
-
-<table class="table table-bordered">
-    <thead class="table-dark">
-        <tr>
-            <th>Nom</th>
-            <th>Prix</th>
-            <th>Image</th>
-        </tr>
-    </thead>
-    <tbody>
+<div class="container">
+    <h2 class="mb-4 text-center">Nos Produits de Beauté Naturelle</h2>
+    <div class="row">
         @foreach ($products as $item)
-        <tr>
-            <td>{{ $item['nom'] }}</td>
-            <td>{{ $item['prix'] }} DH</td>
-            <td>
-                <img src="{{ asset('imgs/'.$item['image']) }}" width="80">
-            </td>
-        </tr>
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="{{ asset('imgs/'.$item['image']) }}" alt="{{ $item['nom'] }}">
+                <h5>{{ $item['nom'] }}</h5>
+                <p>Prix: {{ $item['prix'] }} DH</p>
+                <button class="btn btn-custom">Ajouter au Panier</button>
+            </div>
+        </div>
         @endforeach
-    </tbody>
-</table>
+    </div>
+</div>
 @endsection
