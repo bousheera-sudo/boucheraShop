@@ -9,3 +9,6 @@
 - [x] Update Footer.blade.php: Include "Beauté Naturelle" in copyright.
 - [x] Test site with php artisan serve.
 - [x] Deploy to Vercel via GitHub.
+- [x] Add product images with placeholders.
+- [x] Improve CSS styling and layout.
+- [x] Display logo properly in header.
