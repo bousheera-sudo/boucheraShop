@@ -8,6 +8,7 @@
 <body>
 
 <div style="background:#28a745;color:white;text-align:center;padding:10px;font-size:24px;font-weight:bold;">
+    <img src="{{ asset('imgs/logo.png') }}" alt="Logo Beauté Naturelle" style="height:40px;margin-right:10px;">
     Beauté Naturelle
 </div>
 
