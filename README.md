@@ -1,64 +1,56 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Rapport sur le Store Ecom_V1 - Beauté Naturelle
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Choix du Niche Vertical
 
-## About Laravel
+Le niche choisi pour cette version statique de l'application E-commerce Ecom_V1 est **les produits de beauté naturels**.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Justification
+Nous avons choisi le niche des produits de beauté naturels car il répond à une demande croissante des consommateurs pour des produits sains, respectueux de l'environnement et efficaces. Ce marché permet de cibler un public conscient de sa santé et de l'écologie, facilitant ainsi la fidélisation et la conversion. Les avantages incluent :
+- Ciblage d'un public spécifique et engagé.
+- Facilité de branding avec des valeurs écologiques.
+- Augmentation des chances de conversion grâce à la confiance dans les produits naturels.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Identité Visuelle
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Logo
+Un logo simple a été conçu et intégré dans le header du site. Il utilise une palette de couleurs verte pour évoquer la nature et les produits naturels.
 
-## Learning Laravel
+### Palette de Couleurs
+- **Primaire : Vert (#28a745)** - Représente la nature, la durabilité et les produits bio.
+- **Secondaire : Blanc et Noir** - Pour le contraste et la lisibilité.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Pages Statiques
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Page À propos
+Présente la mission de Beauté Naturelle : fournir des produits de beauté naturels et authentiques pour révéler la beauté intérieure et extérieure de manière durable et respectueuse de l'environnement.
 
-## Laravel Sponsors
+### Page Contact
+Inclut les coordonnées fictives :
+- Email : contact@ecomv1.com
+- Téléphone : +212 6 12 34 56 78
+- Adresse : 123 Rue de la Beauté, Casablanca, Maroc
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Un formulaire de contact simple est fourni pour les utilisateurs.
 
-### Premium Partners
+## Structure du Site
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- **Accueil** : Message de bienvenue pour les produits de beauté naturels.
+- **Produits** : Liste des produits beauté (Crème hydratante, Huile essentielle, Masque visage).
+- **À propos** : Informations sur la mission et les valeurs.
+- **Contact** : Formulaire et coordonnées.
 
-## Contributing
+## Technologies Utilisées
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **Laravel** : Framework PHP pour le backend et les vues.
+- **Bootstrap** : Pour le styling responsive.
+- **Vercel** : Pour le déploiement en ligne via GitHub.
 
-## Code of Conduct
+## Déploiement
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Le site est déployé sur Vercel et accessible via GitHub. La version V1 statique est prête pour les prochaines étapes dynamiques avec base de données.
 
-## Security Vulnerabilities
+## Prochaines Étapes
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Introduction des fonctionnalités dynamiques (gestion de produits avec base de données).
+- Ajout de paniers d'achat et paiement.
+- Amélioration de l'UX/UI.
