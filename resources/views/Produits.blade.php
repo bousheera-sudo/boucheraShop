@@ -19,7 +19,7 @@
             <div class="col-md-4 col-lg-4">
                 <div class="product-card p-4 text-center h-100">
                     <div class="mb-3">
-                        <img src="{{ $product['image'] }}" alt="{{ $product['name'] }}" class="img-fluid rounded">
+                        <i class="fas fa-spa fa-3x" style="color: var(--primary-green);"></i>
                     </div>
                     <h4 class="mb-3">{{ $product['name'] }}</h4>
                     <p class="text-muted mb-3">{{ $product['description'] }}</p>
