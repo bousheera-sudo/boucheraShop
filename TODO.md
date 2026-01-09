@@ -8,4 +8,4 @@
 - [x] Create Contact.blade.php with form and contact info.
 - [x] Update Footer.blade.php: Include "Beauté Naturelle" in copyright.
 - [x] Test site with php artisan serve.
-- [ ] Deploy to Vercel via GitHub.
+- [x] Deploy to Vercel via GitHub.
