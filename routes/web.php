@@ -7,23 +7,26 @@ Route::get('/', function () {
     return view('Home');
 });
 
+/* Page À propos */
+Route::get('/about', function () {
+    return view('About');
+});
+
+/* Page Contact */
+Route::get('/contact', function () {
+    return view('Contact');
+});
+
 /* Route dynamique produits */
 Route::get('/produits/{cat}', function ($cat) {
 
     $produits = [];
 
-    if ($cat == 'hicking') {
+    if ($cat == 'beaute') {
         $produits = [
-            ["nom" => "Sac à dos", "prix" => 200, "image" => "sac_do.jfif"],
-            ["nom" => "Tente", "prix" => 300, "image" => "tent.jfif"],
-            ["nom" => "Montre GPS", "prix" => 150, "image" => "watch_gps.jfif"],
-        ];
-    }
-    elseif ($cat == 'electromenager') {
-        $produits = [
-            ["nom" => "Machine à laver", "prix" => 3000, "image" => "machine_lav.jfif"],
-            ["nom" => "Four", "prix" => 1500, "image" => "four.jfif"],
-            ["nom" => "Micro-onde", "prix" => 1000, "image" => "micro_onde.jfif"],
+            ["nom" => "Crème hydratante", "prix" => 25, "image" => "creme_hydratante.jpg"],
+            ["nom" => "Huile essentielle", "prix" => 15, "image" => "huile_essentielle.jpg"],
+            ["nom" => "Masque visage", "prix" => 20, "image" => "masque_visage.jpg"],
         ];
     }
     else {

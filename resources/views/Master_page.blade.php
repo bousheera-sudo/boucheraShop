@@ -7,6 +7,10 @@
 </head>
 <body>
 
+<div style="background:#28a745;color:white;text-align:center;padding:10px;font-size:24px;font-weight:bold;">
+    Beauté Naturelle
+</div>
+
 @include('Menu')
 
 <div class="container mt-4">
