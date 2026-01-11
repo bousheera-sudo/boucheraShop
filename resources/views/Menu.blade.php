@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="/">
-            <img src="/imgs/logo.png" alt="Logo" width="40" class="me-2">
+            <img src="/imgs/loogo.png" alt="Logo" width="40" class="me-2">
             <strong>Beauté Naturelle</strong>
         </a>
 
