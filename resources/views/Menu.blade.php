@@ -1,6 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
     <div class="container">
-        <a class="navbar-brand" href="/">Beauté Naturelle</a>
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <img src="/imgs/logo.png" alt="Logo" width="40" class="me-2">
+            <strong>Beauté Naturelle</strong>
+        </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
             <span class="navbar-toggler-icon"></span>

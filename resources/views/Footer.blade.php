@@ -1,5 +1,4 @@
-<footer class="bg-light text-center py-3 mt-5">
-    <p class="mb-0">
-        © {{ date('Y') }} Beauté Naturelle – Tous droits réservés
-    </p>
+<footer class="bg-success text-white text-center py-4 mt-5">
+    <p class="mb-1">© {{ date('Y') }} Beauté Naturelle</p>
+    <small>Produits cosmétiques naturels & biologiques</small>
 </footer>
