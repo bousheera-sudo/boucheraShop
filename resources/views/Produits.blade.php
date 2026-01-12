@@ -1,7 +1,8 @@
 @extends('Master_page')
 
 @section('content')
-<div class="container mt-5">
+<div class="bg-beige py-5">
+  <div class="container mt-5">
     <h2 class="text-success text-center mb-4">Nos Produits</h2>
 
     <div class="row g-4">
@@ -44,13 +45,6 @@
                 </div>
             </div>
         </div>                                    
-
-
-
-
-<
-
-
 
     <!-- Nouveaux produits -->
 
@@ -191,6 +185,67 @@
             </div>
         </div>
     </div>
+
+    <!-- Nouveaux produits ajoutés -->
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <img src="https://i0.wp.com/filotablo.fr/wp-content/uploads/2020/08/IMG_20200827_180025.jpg?fit=959%2C1080&ssl=1" class="card-img-top" alt="Sac Tissu">
+            <div class="card-body text-center">
+                <h5 class="card-title">Sac Tissu Réutilisable</h5>
+                <p class="card-text">Pratique et écologique pour vos courses.</p>
+                <span class="badge bg-success">250 MAD</span>
+            </div>
+        </div>
     </div>
+
+    
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" class="card-img-top" alt="Huile de Rose">
+            <div class="card-body text-center">
+                <h5 class="card-title">Huile de Rose</h5>
+                <p class="card-text">Nourrit et adoucit la peau.</p>
+                <span class="badge bg-success">160 MAD</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <img src="https://www.indexsante.ca/chroniques/images/soins-des-cheveux-produits-naturels.jpg" class="card-img-top" alt="Soin Capillaire">
+            <div class="card-body text-center">
+                <h5 class="card-title">Soin Capillaire Nourrissant</h5>
+                <p class="card-text">Fortifie et réduit les pointes sèches.</p>
+                <span class="badge bg-success">145 MAD</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <img src="https://tse4.mm.bing.net/th/id/OIP._KhfRZcpg2PGeOV_k-CyXQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Rouge à Lèvres">
+            <div class="card-body text-center">
+                <h5 class="card-title">Rouge à Lèvres Mat</h5>
+                <p class="card-text">Couleurs riches et longue tenue.</p>
+                <span class="badge bg-success">95 MAD</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.mTUFTh0UsfkRXj0wQEujBwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Lot de Lingettes">
+            <div class="card-body text-center">
+                <h5 class="card-title">Lot de Lingettes Douces</h5>
+                <p class="card-text">Idéal pour le démaquillage et le nettoyage doux.</p>
+                <span class="badge bg-success">55 MAD</span>
+            </div>
+        </div>
+    </div>
+
+    </div>
+  </div>
 </div>
 @endsection

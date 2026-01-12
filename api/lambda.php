@@ -13,6 +13,24 @@ $app->bind(
     App\Http\Kernel::class
 );
 
+// Ensure writable storage subdirectories exist (for serverless environments)
+$storagePath = $app->storagePath();
+$neededDirs = [
+    'framework',
+    'framework/views',
+    'framework/sessions',
+    'framework/cache',
+    'framework/cache/data',
+    'logs',
+    'framework/testing',
+];
+foreach ($neededDirs as $dir) {
+    $path = $storagePath . DIRECTORY_SEPARATOR . $dir;
+    if (!is_dir($path)) {
+        @mkdir($path, 0777, true);
+    }
+}
+
 try {
     $request = Request::capture();
 

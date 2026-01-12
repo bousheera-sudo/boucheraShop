@@ -52,6 +52,10 @@ $app->singleton(
 |
 */
 
-$app->useStoragePath(sys_get_temp_dir());
+// Use system temp for storage when running on serverless platforms (e.g., Vercel)
+// This avoids write failures to read-only filesystem paths.
+if (getenv('VERCEL') || getenv('LAMBDA_TASK_ROOT') || !empty($_SERVER['VERCEL'])) {
+    $app->useStoragePath(sys_get_temp_dir());
+}
 
 return $app;

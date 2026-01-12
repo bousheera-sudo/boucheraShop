@@ -9,7 +9,8 @@
     </div>
 </div>
 
-<div class="container my-5">
+<div class="bg-beige py-5">
+    <div class="container my-5">
     <!-- Présentation -->
     <div class="row align-items-center mb-5">
         <div class="col-md-6">
@@ -97,5 +98,6 @@
         <h3 class="fw-bold mb-3">Prêt à découvrir nos produits?</h3>
         <a href="/produits" class="btn btn-primary btn-lg fw-bold">Voir nos produits →</a>
     </div>
+</div>
 </div>
 @endsection

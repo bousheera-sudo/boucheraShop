@@ -9,8 +9,9 @@
     </div>
 </div>
 
-<div class="container my-5">
-    <div class="row g-4">
+<div class="bg-beige py-5">
+    <div class="container my-5">
+        <div class="row g-4">
         <!-- Info de contact -->
         <div class="col-md-4">
             <div class="card border-0 h-100 text-center">
@@ -71,5 +72,6 @@
             </form>
         </div>
     </div>
+</div>
 </div>
 @endsection
