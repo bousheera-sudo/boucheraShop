@@ -7,7 +7,7 @@
                 <h5>🌿 Beauté Naturelle</h5>
                 <p class="mb-3">Soins naturels et biologiques pour votre bien-être et votre beauté naturelle.</p>
                 <div>
-                    <small style="opacity: 0.8;">Certifiée Bio • 100% Naturelle</small>
+                    <small style="opacity: 0.8;">Certifiée Bio 🌿• 100% Naturelle</small>
                 </div>
             </div>
 
