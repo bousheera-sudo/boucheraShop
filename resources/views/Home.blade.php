@@ -1,19 +1,19 @@
 @extends('Master_page')
 
 @section('content')
-<div class="container mt-5">
-
-    <!-- HERO SECTION -->
+<!-- HERO SECTION -->
+<div class="hero-section" style="padding: 80px 0; min-height: 400px;">
+    <div class="container">
     <div class="row align-items-center mb-5">
         <div class="col-md-6">
-            <h1 class="fw-bold text-success">
-                Révélez votre beauté, naturellement 🌿
+            <h1 class="fw-bold mb-4">
+                Révélez votre beauté naturellement
             </h1>
-            <p class="lead mt-3">
+            <p class="fs-5 mb-4" style="color: rgba(255,255,255,0.95);">
                 Des soins naturels et biologiques pour une peau saine et éclatante.
             </p>
-            <a href="/produits" class="btn btn-success btn-lg mt-3">
-                Voir nos produits
+            <a href="/produits" class="btn btn-light btn-lg fw-bold" style="color: var(--primary-color);">
+                Voir nos produits →
             </a>
         </div>
 
