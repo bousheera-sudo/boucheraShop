@@ -52,4 +52,6 @@ $app->singleton(
 |
 */
 
+$app->useStoragePath(sys_get_temp_dir());
+
 return $app;
