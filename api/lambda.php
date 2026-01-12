@@ -8,10 +8,23 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = require_once __DIR__ . '/../bootstrap/app.php';
 
-$request = Request::capture();
+$app->bind(
+    Illuminate\Contracts\Http\Kernel::class,
+    App\Http\Kernel::class
+);
 
-$response = $app->handle($request);
+try {
+    $request = Request::capture();
 
-$response->send();
+    $response = $app->handle($request);
+    $response->send();
 
-$app->terminate($request, $response);
+    $app->terminate($request, $response);
+} catch (Throwable $e) {
+    // Log full exception to STDERR so it's visible in Vercel logs
+    error_log((string) $e);
+
+    // Return a 500 response
+    http_response_code(500);
+    echo "Internal Server Error";
+}
