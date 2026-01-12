@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar-green">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center fw-bold" href="{{ url('/') }}">
-      <span class="brand-logo me-2" aria-hidden="true" style="background-image: url('{{ asset('imgs/logo.png') }}');"></span>
+      <span class="brand-logo me-2" aria-hidden="true" style="background-image: url('/imgs/logo.png');"></span>
       <span class="brand-text text-white">Beauté Naturelle</span>
     </a>
 
