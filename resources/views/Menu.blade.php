@@ -12,16 +12,17 @@
     <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link {{ request()->path() == '/' ? 'active' : '' }}" href="/">🏠 Accueil</a>
+          <a class="nav-link {{ request()->path() == '/' ? 'active' : '' }}" href="/">  <i class="fas fa-home me-1"></i> Accueil</a>
+          
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ request()->path() == 'produits' ? 'active' : '' }}" href="/produits">Produits</a>
+          <a class="nav-link {{ request()->path() == 'produits' ? 'active' : '' }}" href="/produits"><i class="fas fa-spa me-1"></i> Produits</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ request()->path() == 'about' ? 'active' : '' }}" href="/about">À propos</a>
+          <a class="nav-link {{ request()->path() == 'about' ? 'active' : '' }}" href="/about"> <i class="fas fa-info-circle me-1"></i> À propos </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ request()->path() == 'contact' ? 'active' : '' }}" href="/contact">Contact</a>
+          <a class="nav-link {{ request()->path() == 'contact' ? 'active' : '' }}" href="/contact"><i class="fas fa-envelope me-1"></i> Contact</a>
         </li>
       </ul>
     </div>
