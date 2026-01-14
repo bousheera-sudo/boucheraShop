@@ -1,0 +1,123 @@
+/* Bootstrap-first stylesheet (minimal overrides) */
+
+/* Keep font for brand identity */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html, body {
+    font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #ffffff;
+    color: #212529;
+}
+
+/* Brand logo size (keeps existing inline background) */
+.brand-logo {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 6px;
+}
+
+.brand-text {
+    font-weight: 700;
+    margin-left: 0.5rem;
+}
+
+/* Small footer adjustments to keep spacing sensible */
+.footer {
+    padding: 2rem 0;
+    background-color: #1f6f4d; /* Dark green background */
+    color: #ffffff; /* Light text for contrast */
+}
+.footer a, .footer .footer-link {
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: underline;
+}
+.footer hr {
+    border-color: rgba(255, 255, 255, 0.12);
+    opacity: 0.9;
+}
+
+/* Keep utility to hide hero background if you prefer bootstrap utilities instead */
+.hero-section {
+    padding: 4rem 0;
+}
+
+/* Beige page background utility */
+.bg-beige {
+    background-color: #f5e6d3; /* Beige */
+    border-radius: 8px;
+}
+
+/* Navbar green background and readable links */
+.navbar-green {
+    background-color: #1f6f4d;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.navbar-green .navbar-brand,
+.navbar-green .nav-link {
+    color: #ffffff !important;
+}
+.navbar-green .nav-link:hover {
+    color: rgba(255,255,255,0.9) !important;
+}
+
+/* Remove heavy custom component styles - rely on Bootstrap classes */
+/* Developers: use Bootstrap utilities (p-*, m-*, text-*, bg-*, d-*, etc.) in views */
+
+/* Product grid enhancements */
+.product-grid .card {
+    transition: transform .25s ease, box-shadow .25s ease;
+    overflow: hidden;
+    position: relative;
+}
+.product-grid .card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(31,111,77,0.12);
+}
+.product-img-wrapper {
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #fff;
+}
+.product-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.price-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #ffffff;
+    color: #1f6f4d;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+.card .card-actions {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+/* Modal image styling */
+.modal-body img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Slightly stronger beige panel */
+.bg-beige {
+    background-color: #f6eede;
+    border-radius: 12px;
+}
