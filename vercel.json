@@ -6,6 +6,12 @@
     }
   },
   "routes": [
+    { "src": "/css/(.*)", "dest": "/public/css/$1" },
+    { "src": "/imgs/(.*)", "dest": "/public/imgs/$1" },
+    { "src": "/js/(.*)", "dest": "/public/js/$1" },
+    { "src": "/fonts/(.*)", "dest": "/public/fonts/$1" },
+    { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
+    { "src": "/robots.txt", "dest": "/public/robots.txt" },
     { "src": "/(.*)", "dest": "/api/lambda.php" }
   ]
 }
