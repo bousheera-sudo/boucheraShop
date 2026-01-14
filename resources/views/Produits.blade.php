@@ -245,7 +245,69 @@
         </div>
     </div>
 
+        </div>
     </div>
-  </div>
 </div>
+
+<!-- Product Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="" alt="" id="productModalImage" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <p id="productModalDesc"></p>
+                        <h4 id="productModalPrice" class="text-success"></h4>
+                        <div class="mt-3">
+                            <a href="#" class="btn btn-success">Acheter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+    // Append a small 'Voir' button to each product card body
+    document.querySelectorAll('.card.h-100 .card-body').forEach(function(body){
+        var btn = document.createElement('button');
+        btn.className = 'btn btn-outline-success btn-sm btn-view';
+        btn.textContent = 'Voir';
+        btn.style.marginTop = '10px';
+        body.appendChild(btn);
+    });
+
+    var modalEl = document.getElementById('productModal');
+    var productModal = new bootstrap.Modal(modalEl);
+
+    document.body.addEventListener('click', function(e){
+        if(e.target && e.target.classList.contains('btn-view')){
+            var card = e.target.closest('.card');
+            var title = card.querySelector('.card-title')?.textContent || '';
+            var desc = card.querySelector('.card-text')?.textContent || '';
+            var img = card.querySelector('.card-img-top')?.getAttribute('src') || '';
+            var price = card.querySelector('.badge')?.textContent || '';
+
+            modalEl.querySelector('.modal-title').textContent = title;
+            document.getElementById('productModalImage').src = img;
+            document.getElementById('productModalDesc').textContent = desc;
+            document.getElementById('productModalPrice').textContent = price;
+
+            productModal.show();
+        }
+    });
+});
+</script>
+@endpush
+
 @endsection
