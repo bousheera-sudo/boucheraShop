@@ -49,7 +49,7 @@
                     <img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nom }}" style="height: 200px; object-fit: cover;">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">{{ $produit->nom }}</h5>
-                        <p class="card-text flex-grow-1">{{ Str::limit($produit->description, 50) }}</p>
+                        <p class="card-text flex-grow-1">{{ substr($produit->description, 0, 50) }}</p>
                         <p class="card-text"><strong>{{ $produit->prix }} MAD</strong></p>
                         <a href="/produits" class="btn btn-success mt-auto">Voir plus</a>
                     </div>
