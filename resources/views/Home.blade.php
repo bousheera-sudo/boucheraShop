@@ -37,4 +37,29 @@
         </div>
     </div>
 </section>
+
+<!-- PRODUITS PHares -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Nos Produits Phares</h2>
+        <div class="row">
+            @foreach($produits as $produit)
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nom }}" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{ $produit->nom }}</h5>
+                        <p class="card-text flex-grow-1">{{ Str::limit($produit->description, 50) }}</p>
+                        <p class="card-text"><strong>{{ $produit->prix }} MAD</strong></p>
+                        <a href="/produits" class="btn btn-success mt-auto">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        <div class="text-center mt-4">
+            <a href="/produits" class="btn btn-outline-success btn-lg">Voir tous nos produits</a>
+        </div>
+    </div>
+</section>
 @endsection
