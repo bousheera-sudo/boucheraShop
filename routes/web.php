@@ -4,7 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProduitController;
 
 Route::get('/', function () {
-    $produits = App\Models\Produit::take(4)->get();
+    try {
+        $produits = App\Models\Produit::take(4)->get();
+    } catch (\Exception $e) {
+        $produits = collect(); // Empty collection if DB fails
+    }
     return view('Home', compact('produits'));
 });
 
