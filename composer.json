@@ -29,7 +29,14 @@
         "psr-4": {
             "Tests\\": "tests/"
         }
+
     },
+    "vercel": [
+        "npm run build",
+        "mkdir -p /vercel/output/static",
+        "cp -r public/build /vercel/output/static/",
+        "php artisan migrate --force"
+    ],
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
