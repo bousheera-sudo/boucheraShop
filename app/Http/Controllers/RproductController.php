@@ -9,12 +9,12 @@ use Illuminate\Http\Request;
 class RproductController extends Controller
 {
     /**
-     * Affiche la page d'accueil avec tous les produits.
+     * Affiche la page d'accueil avec les produits phares (8 produits maximum).
      */
     public function home()
     {
-        // On récupère tous les produits pour la page d'accueil
-        $produits = Produit::all();
+        // On récupère 8 produits maximum pour la page d'accueil (produits phares)
+        $produits = Produit::take(8)->get();
 
         // On renvoie la vue 'Home.blade.php' avec les produits
         return view('Home', compact('produits'));
