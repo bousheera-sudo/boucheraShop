@@ -16,7 +16,7 @@ Route::get('/contact', function () {
 });
 
 // Routes pour les produits
-Route::get('/produits', [ProduitController::class, 'index']);
+// Route::get('/produits', [ProduitController::class, 'index']); // REMOVED - conflit avec Route::resource
 Route::get('/produits/categorie/{cat}', [ProduitController::class, 'byCategorie']);
 
 /**
