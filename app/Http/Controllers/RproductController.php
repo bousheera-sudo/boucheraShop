@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AddProductRequest;
 use App\Models\Produit;
 use Illuminate\Http\Request;
-use Cloudinary\Cloudinary;
 
 class RproductController extends Controller
 {
@@ -54,24 +53,39 @@ class RproductController extends Controller
         $nom       = $request->input('nom');
         $prix      = $request->input('prix');
         $categorie = $request->input('categorie');
-        // getClientOriginalName() retourne le nom d’origine de l’image uploadée
-        $image     = $request->file('image')->getClientOriginalName();
 
-        // 3. Créer un nouvel objet Produit
+        // 3. Upload de l'image vers Cloudinary
+        $imageUrl = null;
+        if ($request->hasFile('image')) {
+            try {
+                $uploadedFileUrl = cloudinary()->upload($request->file('image')->getRealPath(), [
+                    'folder' => 'beauté-naturelle/products',
+                    'transformation' => [
+                        'width' => 800,
+                        'height' => 600,
+                        'crop' => 'limit',
+                        'quality' => 'auto'
+                    ]
+                ])->getSecurePath();
+
+                $imageUrl = $uploadedFileUrl;
+            } catch (\Exception $e) {
+                return back()->with('error', 'Erreur lors de l\'upload de l\'image: ' . $e->getMessage());
+            }
+        }
+
+        // 4. Créer un nouvel objet Produit
         $Produit = new Produit();
         $Produit->nom       = $nom;
         $Produit->prix      = $prix;
         $Produit->categorie = $categorie;
-        $Produit->image     = $image;
+        $Produit->image     = $imageUrl; // URL Cloudinary au lieu du nom de fichier local
 
-        // 4. Enregistrer dans la table 'produits'
+        // 5. Enregistrer dans la table 'produits'
         $Produit->save();
 
-        // 5. Déplacer l’image dans le dossier public/imgs
-        $request->file('image')->move(public_path('imgs'), $image);
-
         // 6. Retourner à la même page avec un message flash de succès
-        return back()->with('success', 'You have successfully added a new Product.');
+        return back()->with('success', 'Produit ajouté avec succès !');
     }
 
     /**
@@ -110,9 +124,21 @@ class RproductController extends Controller
 
         // Gestion de l'image si uploadée
         if ($request->hasFile('image')) {
-            $image = $request->file('image')->getClientOriginalName();
-            $request->file('image')->move(public_path('imgs'), $image);
-            $produit->image = $image;
+            try {
+                $uploadedFileUrl = cloudinary()->upload($request->file('image')->getRealPath(), [
+                    'folder' => 'beauté-naturelle/products',
+                    'transformation' => [
+                        'width' => 800,
+                        'height' => 600,
+                        'crop' => 'limit',
+                        'quality' => 'auto'
+                    ]
+                ])->getSecurePath();
+
+                $produit->image = $uploadedFileUrl;
+            } catch (\Exception $e) {
+                return back()->with('error', 'Erreur lors de l\'upload de l\'image: ' . $e->getMessage());
+            }
         }
 
         $produit->save();

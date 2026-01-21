@@ -1,1 +1,62 @@
+# Laravel specific files to exclude
+.env
+.env.local
+.env.*.local
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+
+# Storage (keep structure but exclude content)
+storage/app/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+storage/logs/*
+bootstrap/cache/*
+!storage/app/.gitkeep
+!storage/framework/.gitkeep
+!storage/framework/cache/.gitkeep
+!storage/framework/sessions/.gitkeep
+!storage/framework/views/.gitkeep
+!storage/logs/.gitkeep
+!bootstrap/cache/.gitkeep
+
+# Testing
+tests
+phpunit.xml
+
+# Documentation
+README.md
+CHANGELOG.md
+TODO.md
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node modules (if any)
+node_modules
+npm-debug.log*
+
+# Public index.php (handled by lambda.php)
 public/index.php
