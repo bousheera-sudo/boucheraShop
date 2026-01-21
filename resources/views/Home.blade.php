@@ -46,7 +46,7 @@
             @foreach($produits as $produit)
             <div class="col-md-3 mb-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nom }}" style="height: 200px; object-fit: cover;">
+                    <img src="/imgs/{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nom }}" style="height: 200px; object-fit: cover;">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">{{ $produit->nom }}</h5>
                         <p class="card-text flex-grow-1">{{ substr($produit->description, 0, 50) }}</p>

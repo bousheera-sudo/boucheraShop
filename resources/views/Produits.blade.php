@@ -3,7 +3,10 @@
 @section('content')
 <div class="bg-beige py-5">
     <div class="container mt-5">
-        <h2 class="text-success text-center mb-4">Nos Produits</h2>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="text-success mb-0">Nos Produits</h2>
+            <a href="/produits/create" class="btn btn-success">Ajouter un produit</a>
+        </div>
 
         <!-- Barre de recherche -->
         <div class="row mb-4">
@@ -37,25 +40,59 @@
                     @foreach($produits as $produit)
                     <tr>
                         <td>
-                            <img src="{{ $produit->image }}"
+                            <img src="/imgs/{{ $produit->image }}"
                                  alt="{{ $produit->nom }}"
                                  style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;">
                         </td>
                         <td>{{ $produit->nom }}</td>
                         <td>{{ $produit->description }}</td>
                         <td><span class="badge bg-success">{{ $produit->prix }} MAD</span></td>
-                        <td>
-                            <button class="btn btn-sm btn-outline-primary view-product"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#productModal"
-                                    data-name="{{ $produit->nom }}"
-                                    data-description="{{ $produit->description }}"
-                                    data-price="{{ $produit->prix }} MAD"
-                                    data-image="{{ $produit->image }}">
-                                <i class="fas fa-eye"></i> Voir
+                        <td style="display: flex; gap: 5px;">
+                            <a class="btn btn-warning btn-sm" href="/produits/{{ $produit->id }}/edit" title="Modifier">
+                                <i class="fas fa-edit"></i> Modifier
+                            </a>
+                            <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal-{{ $produit->id }}" title="Supprimer">
+                                <i class="fas fa-trash"></i> Supprimer
                             </button>
                         </td>
                     </tr>
+                    <!-- Modal de suppression -->
+                    <div class="modal fade" id="deleteModal-{{ $produit->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel-{{ $produit->id }}" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content border-0 shadow-lg">
+                                <div class="modal-header bg-danger text-white">
+                                    <h5 class="modal-title" id="deleteModalLabel-{{ $produit->id }}">
+                                        <i class="fas fa-exclamation-triangle me-2"></i>Confirmation de suppression
+                                    </h5>
+                                    <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-center p-4">
+                                    <div class="mb-3">
+                                        <i class="fas fa-trash-alt fa-3x text-danger mb-3"></i>
+                                    </div>
+                                    <h6 class="mb-3">Êtes-vous sûr de vouloir supprimer ce produit ?</h6>
+                                    <div class="alert alert-warning">
+                                        <strong>Produit:</strong> {{ $produit->nom }}<br>
+                                        <strong>Prix:</strong> {{ $produit->prix }} MAD<br>
+                                        <strong>Catégorie:</strong> {{ $produit->categorie }}
+                                    </div>
+                                    <p class="text-muted mb-0">Cette action est irréversible.</p>
+                                </div>
+                                <div class="modal-footer justify-content-center">
+                                    <button type="button" class="btn btn-outline-secondary px-4" data-dismiss="modal">
+                                        <i class="fas fa-times me-2"></i>Annuler
+                                    </button>
+                                    <form action="/produits/{{ $produit->id }}" method="POST" style="display: inline;">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger px-4">
+                                            <i class="fas fa-trash me-2"></i>Supprimer définitivement
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     @endforeach
                 </tbody>
             </table>
@@ -63,11 +100,7 @@
 
         <!-- Pagination -->
         <div class="d-flex justify-content-center mt-4">
-            <nav aria-label="Page navigation">
-                <div class="pagination">
-                    {{ $produits->links('vendor.pagination.custom') }}
-                </div>
-            </nav>
+            {{ $produits->links('vendor.pagination.custom') }}
         </div>
 
         <!-- Message quand aucun produit n'est trouvé -->
@@ -102,5 +135,43 @@
         </div>
     </div>
 </div>
+
+<!-- Custom Styles -->
+<style>
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    border-top: none;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.modal-content {
+    border-radius: 15px;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeaa7;
+    color: #856404;
+}
+</style>
 
 @endsection
